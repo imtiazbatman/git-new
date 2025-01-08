@@ -1,0 +1,33 @@
+name: deployment 1
+on: push
+jobs:
+ deployment:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Get the code
+    uses: actions/checkout@v4
+    with:
+      ref: main 
+  - name: installing the nodejs 
+    uses: actions/setup-node@v4
+    with:
+      node-version: 18
+  - name: accessing the pakage
+    run: echo "Listing details of package.json file"; cd 04+Practice+Project
+  - name: installing depandencies
+    run: npm install
+  - name: lint
+    run: npm run lint
+  - name: test the code
+    run : npm run test
+  - name: Build code 
+    run: npm run build
+ another-jobs-1:
+  needs: deployment
+  runs-on: ubuntu-latest
+  steps:
+  - name: Get the code
+    uses: actions/checkout@v3
+  - name: test another jobs
+    run: echo "anohter jobs"
+  
