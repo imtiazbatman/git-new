@@ -13,7 +13,7 @@ jobs:
     with:
       node-version: 18
   - name: accessing the pakage
-    run: cd "04-Practice-Project-(Start)"
+    run:  cat 04-Practice-Project-(Start)/package.json
   - name: installing depandencies
     run: npm install
   - name: lint
