@@ -13,7 +13,7 @@ jobs:
     with:
       node-version: 18
   - name: accessing the pakage
-    run: echo "Listing details of package.json file"; cd 04-Practice-Project
+    run: ls -la
   - name: installing depandencies
     run: npm install
   - name: lint
