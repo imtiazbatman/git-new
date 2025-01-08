@@ -17,11 +17,11 @@ jobs:
   - name: installing depandencies
     run: npm install --prefix "04-Practice-Project-(Start)"
   - name: lint
-    run: npm run lint
+    run: npm run lint --prefix "04-Practice-Project-(Start)"
   - name: test the code
-    run : npm run test
+    run : npm run test --prefix "04-Practice-Project-(Start)"
   - name: Build code 
-    run: npm run build
+    run: npm run build --prefix "04-Practice-Project-(Start)"
  another-jobs-1:
   needs: deployment
   runs-on: ubuntu-latest
