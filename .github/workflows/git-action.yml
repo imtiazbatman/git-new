@@ -15,7 +15,7 @@ jobs:
   - name: accessing the pakage
     run:  cat "04-Practice-Project-(Start)/package.json"
   - name: installing depandencies
-    run: npm install --prefix 04-Practice-Project-(Start)
+    run: npm install --prefix "04-Practice-Project-(Start)"
   - name: lint
     run: npm run lint
   - name: test the code
